@@ -3,9 +3,7 @@ function getPlot(id) {
     // getting data from the json file
     d3.json("data/samples.json").then((data)=> {
         console.log(data)
-  
-        var wfreq = data.metadata.map(d => d.wfreq)
-        console.log(`Washing Freq: ${wfreq}`)
+
         
         // filter sample values by id 
         var samples = data.samples.filter(s => s.id.toString() === id)[0];
@@ -89,7 +87,10 @@ function getPlot(id) {
         Plotly.newPlot("bubble", data1, layout_b); 
   
         // The guage chart
-  
+          
+        var wfreq = data.metadata.map(d => d.wfreq)
+        console.log(`Washing Freq: ${wfreq}`)
+
         var data_g = [
           {
           domain: { x: [0, 1], y: [0, 1] },
@@ -101,11 +102,11 @@ function getPlot(id) {
           gauge: { axis: { range: [null, 9] },
                    bar: { color: "green" },
                    steps: [
-                    { range: [0, 2], color: "yellow" },
-                    { range: [2, 4], color: "cyan" },
-                    { range: [4, 6], color: "teal" },
-                    { range: [6, 8], color: "lime" },
-                    { range: [8, 9], color: "green" },
+                    { range: [0, 2], color: #e3c5cd },
+                    { range: [2, 4], color: #c48999 },
+                    { range: [4, 6], color: #873d51 },
+                    { range: [6, 8], color: #701a31 },
+                    { range: [8, 9], color: #470114 },
                   ]}
               
           }
@@ -113,7 +114,7 @@ function getPlot(id) {
         var layout_g = { 
             width: 500, 
             height: 400, 
-            margin: { t: 20, b: 40, l:100, r:100 } 
+            margin: { t: 25, b: 25, l:25, r:25 } 
           };
         Plotly.newPlot("gauge", data_g, layout_g);
       });
