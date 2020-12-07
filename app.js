@@ -35,7 +35,7 @@ function getPlot(id) {
             y: OTU_id,
             text: labels,
             marker: {
-              color: 'rgb(142,124,195)'},
+              color: 'rgb(24,132,140)'},
             type:"bar",
             orientation: "h",
         };
@@ -99,6 +99,7 @@ function getPlot(id) {
           
           mode: "gauge+number",
           gauge: { axis: { range: [null, 9] },
+                   bar: { color: "green" },
                    steps: [
                     { range: [0, 2], color: "yellow" },
                     { range: [2, 4], color: "cyan" },
@@ -110,8 +111,8 @@ function getPlot(id) {
           }
         ];
         var layout_g = { 
-            width: 700, 
-            height: 600, 
+            width: 500, 
+            height: 400, 
             margin: { t: 20, b: 40, l:100, r:100 } 
           };
         Plotly.newPlot("gauge", data_g, layout_g);
