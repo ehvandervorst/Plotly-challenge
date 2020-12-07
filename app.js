@@ -50,9 +50,9 @@ function getPlot(id) {
                 tickmode:"linear",
             },
             margin: {
-                l: 100,
-                r: 100,
-                t: 100,
+                l: 30,
+                r: 30,
+                t: 30,
                 b: 30
             }
         };
