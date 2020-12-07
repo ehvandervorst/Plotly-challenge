@@ -99,7 +99,7 @@ function getPlot(id) {
           
           mode: "gauge+number",
           gauge: { axis: { range: [null, 9] },
-                   bar: { color: "green" },
+                   bar: { color: "PaleGreen" },
                    steps: [
                     { range: [0, 2], color: "Salmon" },
                     { range: [2, 4], color: "LightCoral" },
