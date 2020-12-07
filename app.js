@@ -101,11 +101,11 @@ function getPlot(id) {
           gauge: { axis: { range: [null, 9] },
                    bar: { color: "green" },
                    steps: [
-                    { range: [0, 2], color: #e3c5cd },
-                    { range: [2, 4], color: #c48999 },
-                    { range: [4, 6], color: #873d51 },
-                    { range: [6, 8], color: #701a31 },
-                    { range: [8, 9], color: #470114 },
+                    { range: [0, 2], color: "Salmon" },
+                    { range: [2, 4], color: "LightCoral" },
+                    { range: [4, 6], color: "IndianRed" },
+                    { range: [6, 8], color: "FireBrick" },
+                    { range: [8, 9], color: "DarkRed" },
                   ]}
               
           }
