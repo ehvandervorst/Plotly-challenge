@@ -35,7 +35,7 @@ function getPlot(id) {
             y: OTU_id,
             text: labels,
             marker: {
-              color: 'rgb(24,132,140)'},
+              color: 'rgb(51, 131, 255)'},
             type:"bar",
             orientation: "h",
         };
@@ -50,7 +50,7 @@ function getPlot(id) {
                 tickmode:"linear",
             },
             margin: {
-                l: 30,
+                l: 100,
                 r: 30,
                 t: 30,
                 b: 30
